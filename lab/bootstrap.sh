@@ -30,6 +30,14 @@ curl -s https://get.docker.com | sudo sh
         sudo tar xzvfC cilium-linux-amd64.tar.gz /usr/local/bin > /dev/null
         rm cilium-linux-amd64.tar.gz
         cilium completion bash | sudo tee /etc/bash_completion.d/cilium > /dev/null
+
+        # Install Helm
+        HELM_VERSION=v3.15.2
+        curl -sLo helm-linux-amd64.tar.gz https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz
+        tar xzvf helm-linux-amd64.tar.gz
+        sudo mv linux-amd64/helm /usr/local/bin/helm
+        rm -r helm-linux-amd64.tar.gz linux-amd64
+        helm completion bash | sudo tee /etc/bash_completion.d/helm > /dev/null
 )
 
 echo
