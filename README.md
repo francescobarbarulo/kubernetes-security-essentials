@@ -14,6 +14,12 @@ The _Kubernetes Security Essentials_ course aims to provide you an overview abou
 
 5. [Install cilium CLI](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/#install-the-cilium-cli) to deploy Cilium network plugin within the Kubernetes cluster.
 
+Instead of installing all the tools manually, you can run the following script:
+
+```sh
+curl https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/bootstrap.sh | sudo sh
+```
+
 ## Getting Started
 
 1. Create a single node control plane, 2-worker nodes Kubernetes cluster without the default CNI plugin using kind.
