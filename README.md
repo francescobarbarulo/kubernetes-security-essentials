@@ -17,22 +17,22 @@ The _Kubernetes Security Essentials_ course aims to provide you an overview abou
 Instead of installing all the tools manually, you can run the following script:
 
 ```sh
-curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/bootstrap.sh | sudo sh
+curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/bootstrap.sh | sh
 ```
 
 ## Getting Started
 
-1. Create a single node control plane, 2-worker nodes Kubernetes cluster without the default CNI plugin using kind.
+1. Create a Kubernetes cluster with single control-plane and two worker nodes using `kind`.
 
    ```sh
    curl -sLO https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/kind-config.yml
-   kind create cluster --config=kind-config.yml
+   kind create cluster --config=$(curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/kind-config.yml)
    ```
 
 2. Deploy the Cilium network plugin.
 
    ```sh
-   cilium install --version 1.15.5
+   cilium install --version 1.15.6
    ```
 
 3. Verify all the nodes are in `Ready` state.
