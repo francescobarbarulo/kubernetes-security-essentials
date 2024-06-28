@@ -52,7 +52,7 @@ spec:
           readinessProbe:
             httpGet:
               path: /realms/master
-              port: 8080s
+              port: 8080
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -62,7 +62,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: keycloak.$LB_IP.sslip.io
+  - host: keycloak.LB_IP.sslip.io
     http:
       paths:
       - backend:
