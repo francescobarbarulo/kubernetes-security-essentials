@@ -17,7 +17,7 @@ The _Kubernetes Security Essentials_ course aims to provide you an overview abou
 Instead of installing all the tools manually, you can run the following script:
 
 ```sh
-curl https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/bootstrap.sh | sudo sh
+curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/bootstrap.sh | sudo sh
 ```
 
 ## Getting Started
