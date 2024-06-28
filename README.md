@@ -25,8 +25,7 @@ curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security
 1. Create a Kubernetes cluster with single control-plane and two worker nodes using `kind`.
 
    ```sh
-   curl -sLO https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/kind-config.yml
-   kind create cluster --config=$(curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/kind-config.yml)
+   kind create cluster --config=<(curl -s https://raw.githubusercontent.com/francescobarbarulo/kubernetes-security-essentials/main/lab/kind-config.yml)
    ```
 
 2. Deploy the Cilium network plugin.
